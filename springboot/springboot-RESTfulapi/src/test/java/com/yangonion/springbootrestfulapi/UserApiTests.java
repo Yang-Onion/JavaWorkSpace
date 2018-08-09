@@ -60,6 +60,7 @@ public class UserApiTests {
                 .andExpect(content().string(equalTo("2")));
 
         //4:删除一个user
+        /*
         request=delete("/users/2");
         mvc.perform(request)
                 .andExpect(status().isOk())
@@ -72,6 +73,7 @@ public class UserApiTests {
         mvc.perform(request)
                 .andExpect(status().isOk())
                 .andExpect(content().string(equalTo("Update Sucess!")));
+        */
 
         /*
         request=get("/users/1");
