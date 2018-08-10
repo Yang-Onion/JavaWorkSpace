@@ -19,6 +19,12 @@ public interface UserService {
      */
     void removeUser(Long id);
 
+    /**删除所有用户
+     *
+     */
+    void removeAllUsers();
+
+
     /**更新用户
      * @param user
      */
@@ -33,5 +39,7 @@ public interface UserService {
      * @param id
      */
     User getUser(Long id);
+
+
 
 }

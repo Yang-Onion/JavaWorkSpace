@@ -36,6 +36,11 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    public void removeAllUsers() {
+        jdbcTemplate.update("delete from user");
+    }
+
+    @Override
     public void updateUser(User user) {
         jdbcTemplate.update("update user set name=?,age=? where id=?",user.getName(),user.getAge(),user.getId());
     }
@@ -52,7 +57,7 @@ public class UserServiceImpl implements UserService {
 
             User user = new User();
             user.setId((Long) userMap.get("id"));
-            user.setName((String) userMap.get("id"));
+            user.setName((String) userMap.get("name"));
             user.setAge((Integer) userMap.get("age"));
 
             userList.add(user);
