@@ -13,6 +13,7 @@ import java.beans.ConstructorProperties;
 /**
  * @author Yang
  */
+/*
 @Configuration
 public class DataSourceConfig {
 
@@ -30,3 +31,4 @@ public class DataSourceConfig {
         return  DataSourceBuilder.create().build();
     }
 }
+*/
