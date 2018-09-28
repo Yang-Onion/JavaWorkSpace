@@ -1,4 +1,4 @@
-package com.yangonion.mybatis.multidatasource.dao.mssqldao;
+package com.yangonion.mybatis.multidatasource.mssqldao;
 
 import org.apache.ibatis.annotations.Mapper;
 

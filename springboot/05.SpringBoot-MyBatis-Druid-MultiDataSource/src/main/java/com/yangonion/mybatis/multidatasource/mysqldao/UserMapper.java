@@ -1,4 +1,4 @@
-package com.yangonion.mybatis.multidatasource.dao.mysqldao;
+package com.yangonion.mybatis.multidatasource.mysqldao;
 
 import org.apache.ibatis.annotations.Mapper;
 

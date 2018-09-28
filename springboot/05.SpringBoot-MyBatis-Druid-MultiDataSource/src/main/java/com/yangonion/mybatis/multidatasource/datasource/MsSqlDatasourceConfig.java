@@ -17,7 +17,7 @@ import javax.sql.DataSource;
 @Configuration
 @MapperScan(basePackages = MsSqlDatasourceConfig.PACKAGE,sqlSessionFactoryRef = "mssqlSqlSessionFactory")
 public class MsSqlDatasourceConfig  {
-    static final  String PACKAGE ="com.yangonion.mybatis.multidatasource.datasource.dao.mssqldao";
+    static final  String PACKAGE ="com.yangonion.mybatis.multidatasource.mssqldao";
     static final  String MAPPER_LOCATION ="classpath:mapper/mssql/*.xml";
 
     @Primary
@@ -38,7 +38,8 @@ public class MsSqlDatasourceConfig  {
     public SqlSessionFactory mssqlSqlSessionFactory(@Qualifier("mssqldatasource") DataSource dataSource) throws  Exception{
         final SqlSessionFactoryBean sessionFactory= new SqlSessionFactoryBean();
         sessionFactory.setDataSource(dataSource);
-        sessionFactory.setMapperLocations(new PathMatchingResourcePatternResolver().getResources(MsSqlDatasourceConfig.MAPPER_LOCATION));
+        sessionFactory.setMapperLocations(new PathMatchingResourcePatternResolver()
+                                            .getResources(MsSqlDatasourceConfig.MAPPER_LOCATION));
         return  sessionFactory.getObject();
     }
 }

@@ -19,7 +19,7 @@ import javax.sql.DataSource;
 @MapperScan(basePackages = MysqlDataSourceConfig.PACKAGE,sqlSessionFactoryRef = "mysqlSqlSessionFactory")
 public class MysqlDataSourceConfig {
     //dao路径
-    static  final  String PACKAGE="com.yangonion.mybatis.multidatasource.dao.mysqldao";
+    static  final  String PACKAGE="com.yangonion.mybatis.multidatasource.mysqldao";
     //mybatis扫描路径
     static  final String MAPPER_LOCATION="classpath:mapper/mysql/*.xml";
 
@@ -41,7 +41,8 @@ public class MysqlDataSourceConfig {
     public  SqlSessionFactory mysqlSqlSessionFactory(@Qualifier("mysqldatasource") DataSource dataSource) throws  Exception{
         final  SqlSessionFactoryBean sessionFactory = new SqlSessionFactoryBean();
         sessionFactory.setDataSource(dataSource);
-        sessionFactory.setMapperLocations(new PathMatchingResourcePatternResolver().getResources(MysqlDataSourceConfig.MAPPER_LOCATION));
+        sessionFactory.setMapperLocations(new PathMatchingResourcePatternResolver()
+                                        .getResources(MysqlDataSourceConfig.MAPPER_LOCATION));
         return  sessionFactory.getObject();
     }
 }
