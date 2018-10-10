@@ -16,23 +16,20 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@Controller
-@Api(value = "HomeController")
+@RestController
+@Api(value = "HomeController",tags = {"用户操作接口"})
 @RequestMapping("home")
 public class HomeController {
 
-
-    @ApiIgnore
-   @RequestMapping("/hello")
+   @ApiIgnore
+   @RequestMapping(value = "/hello",method = RequestMethod.GET)
     public   String hello(){
         return  "hello";
     }
-
-
-    @ApiOperation(value = "获取用户信息",notes = "根据id获取用户信息")
+    @ApiOperation(value = "获取用户信息",notes = "根据id获取用户信息",tags = {"查询"})
     @ApiImplicitParam(name = "id",value = "用户id",required = true,dataType = "Long",paramType = "path")
-    @GetMapping("/{id}")
-    public User getUserById(@PathVariable(value = "id") Long id){
+    @RequestMapping(value = "/{id}",method = RequestMethod.GET)
+    public  User getUserById(@PathVariable(value = "id") Long id){
         User user = new User();
         user.setId(id);
         user.setAge(20);
@@ -40,8 +37,8 @@ public class HomeController {
         return  user;
     }
 
-    @ApiOperation(value = "获取用户列表",notes = "获取所有用户")
-    @GetMapping("/list")
+    @ApiOperation(value = "获取用户列表",notes = "获取所有用户",tags = {"查询"})
+    @RequestMapping(value = "/list",method = RequestMethod.GET)
     public List<User> getUserList(){
         User user = new User();
         user.setId(1);
@@ -60,31 +57,31 @@ public class HomeController {
         return  userList;
     }
 
-    @ApiOperation(value = "新增用户",notes = "新增用户")
+    @ApiOperation(value = "新增用户",notes = "新增用户",tags = {"更新"})
     @ApiImplicitParam(name = "user",value = "用户实例",dataType = "User",required = true)
-    @PostMapping("/add")
+    @RequestMapping(value = "/add",method = RequestMethod.POST)
     public Map<String,Boolean> addUser(@RequestBody User user){
         Map<String,Boolean> map = new HashMap<>();
         map.put("result",true);
         return map;
     }
 
-    @ApiOperation(value = "新增用户",notes = "新增用户")
+    @ApiOperation(value = "删除用户",notes = "删除用户",tags = {"删除"})
     @ApiImplicitParam(name = "id",value = "用户id",required = true,dataType = "Long")
-    @DeleteMapping("/{id}")
+    @RequestMapping(value = "/{id}",method = RequestMethod.DELETE)
     public Map<String,Boolean> deleteUser(@PathVariable(value = "id") Long id){
         Map<String,Boolean> map = new HashMap<>();
         map.put("result",true);
         return map;
     }
 
-    @ApiOperation(value = "更新用户",notes = "更新用户")
+    @ApiOperation(value = "更新用户",notes = "更新用户",tags = {"更新"})
     @ApiImplicitParams({
             @ApiImplicitParam(name = "id",value = "用户id",required = true,dataType = "Long"),
             @ApiImplicitParam(name = "user",value = "用户实体",required = true,dataType = "User")
 
     })
-    @PutMapping("/{id}")
+    @RequestMapping(value = "/{id}",method = RequestMethod.PUT)
     public Map<String,Boolean> updateUser(@PathVariable(value = "id") Long id,@RequestBody User user){
         Map<String,Boolean> map = new HashMap<>();
         map.put("result",true);
