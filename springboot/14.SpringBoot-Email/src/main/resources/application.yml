@@ -1,0 +1,13 @@
+spring:
+  mail:
+    host: smtp.126.com
+    username: xxx@126.com
+    password: xxx
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            requried: true
+emailReceiver: xxx@qq.com
