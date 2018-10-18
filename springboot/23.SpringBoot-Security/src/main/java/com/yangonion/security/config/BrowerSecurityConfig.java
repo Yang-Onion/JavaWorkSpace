@@ -34,7 +34,7 @@ public class BrowerSecurityConfig extends WebSecurityConfigurerAdapter {
                 .failureHandler(authFailHandler)
                 .and()
                 .authorizeRequests()
-                .antMatchers("/authentication/require","/login.html","/css/**").permitAll()
+                .antMatchers("/authentication/require","/login.html","/css/**","/code/image").permitAll()
                 .anyRequest()
                 .authenticated().and().csrf().disable();
     }
