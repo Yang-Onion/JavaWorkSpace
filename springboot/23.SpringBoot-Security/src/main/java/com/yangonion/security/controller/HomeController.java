@@ -1,13 +1,17 @@
 package com.yangonion.security.controller;
 
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class HomeController {
 
-    @RequestMapping("/")
-    public  String index(){
-        return "Home-Index";
+    @RequestMapping("/index")
+    public  Object index(Authentication authentication){
+        return authentication;
+        //或者:
+        //return SecurityContextHolder.getContext().getAuthentication();
     }
 }
