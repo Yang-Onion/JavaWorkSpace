@@ -20,7 +20,6 @@ public class BrowerSecurityController {
     private RequestCache requestCache= new HttpSessionRequestCache();
     private RedirectStrategy redirectStrategy= new DefaultRedirectStrategy();
 
-
     @RequestMapping("/authentication/require")
     @ResponseStatus(HttpStatus.UNAUTHORIZED)
     public String requireAuthentication(HttpServletRequest request, HttpServletResponse response) throws IOException {
@@ -33,7 +32,5 @@ public class BrowerSecurityController {
         }
         return "访问的资源需要身份认证！";
     }
-
-
 }
 

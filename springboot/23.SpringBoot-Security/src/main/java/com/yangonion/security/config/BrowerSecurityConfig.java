@@ -1,9 +1,11 @@
 package com.yangonion.security.config;
 
+import com.sun.scenario.effect.impl.prism.PrReflectionPeer;
 import com.yangonion.security.filter.ValidateCodeFilter;
 import com.yangonion.security.handler.AuthFailHandler;
 import com.yangonion.security.handler.AuthSuccessHandler;
 import com.yangonion.security.service.UserService;
+import com.yangonion.security.sms.SmsCodeFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -34,6 +36,9 @@ public class BrowerSecurityConfig extends WebSecurityConfigurerAdapter {
     private ValidateCodeFilter validateCodeFilter;
 
     @Autowired
+    private SmsCodeFilter smsCodeFilter;
+
+    @Autowired
     private DataSource dataSource;
 
     @Autowired
@@ -41,7 +46,9 @@ public class BrowerSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.addFilterBefore(validateCodeFilter, UsernamePasswordAuthenticationFilter.class)
+        http
+                .addFilterBefore(validateCodeFilter, UsernamePasswordAuthenticationFilter.class)
+                .addFilterBefore(smsCodeFilter,UsernamePasswordAuthenticationFilter.class)
                 .formLogin()
                 .loginPage("/authentication/require")
                 .loginProcessingUrl("/login")
@@ -54,7 +61,7 @@ public class BrowerSecurityConfig extends WebSecurityConfigurerAdapter {
                     .userDetailsService(userService)
                 .and()
                 .authorizeRequests()
-                .antMatchers("/authentication/require","/login.html","/css/**","/code/image").permitAll()
+                .antMatchers("/authentication/require","/login.html","/css/**","/code/image","/code/sms").permitAll()
                 .anyRequest()
                 .authenticated().and().csrf().disable();
     }
