@@ -3,6 +3,7 @@ package com.yangonion.security.config;
 import com.yangonion.security.filter.ValidateCodeFilter;
 import com.yangonion.security.handler.AuthFailHandler;
 import com.yangonion.security.handler.AuthSuccessHandler;
+import com.yangonion.security.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -14,13 +15,15 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.DefaultRedirectStrategy;
 import org.springframework.security.web.RedirectStrategy;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.security.web.authentication.rememberme.JdbcTokenRepositoryImpl;
+import org.springframework.security.web.authentication.rememberme.PersistentTokenRepository;
 import org.springframework.security.web.savedrequest.HttpSessionRequestCache;
 import org.springframework.security.web.savedrequest.RequestCache;
 
+import javax.sql.DataSource;
+
 @Configuration
 public class BrowerSecurityConfig extends WebSecurityConfigurerAdapter {
-
-
 
     @Autowired
     private AuthSuccessHandler authSuccessHandler;
@@ -30,6 +33,12 @@ public class BrowerSecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     private ValidateCodeFilter validateCodeFilter;
 
+    @Autowired
+    private DataSource dataSource;
+
+    @Autowired
+    private UserService userService;
+
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.addFilterBefore(validateCodeFilter, UsernamePasswordAuthenticationFilter.class)
@@ -38,6 +47,11 @@ public class BrowerSecurityConfig extends WebSecurityConfigurerAdapter {
                 .loginProcessingUrl("/login")
                 .successHandler(authSuccessHandler)
                 .failureHandler(authFailHandler)
+                .and()
+                    .rememberMe()
+                    .tokenRepository(persistentTokenRepository())
+                    .tokenValiditySeconds(3600)
+                    .userDetailsService(userService)
                 .and()
                 .authorizeRequests()
                 .antMatchers("/authentication/require","/login.html","/css/**","/code/image").permitAll()
@@ -49,4 +63,13 @@ public class BrowerSecurityConfig extends WebSecurityConfigurerAdapter {
     public PasswordEncoder passwordEncoder(){
         return  new BCryptPasswordEncoder();
     }
+
+    @Bean
+    public PersistentTokenRepository persistentTokenRepository(){
+        JdbcTokenRepositoryImpl jdbcTokenRepository= new JdbcTokenRepositoryImpl();
+        jdbcTokenRepository.setDataSource(dataSource);
+        jdbcTokenRepository.setCreateTableOnStartup(false);
+        return jdbcTokenRepository;
+    }
+
 }
