@@ -28,7 +28,7 @@ public class SmsAuthenticationConfig extends SecurityConfigurerAdapter<DefaultSe
         smsAuthenticationFilter.setAuthenticationSuccessHandler(authSuccessHandler);
         smsAuthenticationFilter.setAuthenticationFailureHandler(authFailHandler);
         SmsAuthenticationProvider smsAuthenticationProvider= new SmsAuthenticationProvider();
-        smsAuthenticationProvider.setUserDetailsService(userService);
+        smsAuthenticationProvider.setUserDetailService(userService);
 
         builder.authenticationProvider(smsAuthenticationProvider)
                 .addFilterAfter(smsAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);

@@ -48,7 +48,7 @@ public class BrowerSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .addFilterBefore(validateCodeFilter, UsernamePasswordAuthenticationFilter.class)
-                .addFilterBefore(smsCodeFilter,UsernamePasswordAuthenticationFilter.class)
+                //.addFilterBefore(smsCodeFilter,UsernamePasswordAuthenticationFilter.class)
                 .formLogin()
                 .loginPage("/authentication/require")
                 .loginProcessingUrl("/login")
