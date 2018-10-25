@@ -10,6 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class LoginController {
@@ -20,9 +21,10 @@ public class LoginController {
     }
 
     @RequestMapping(value = "/login",method = RequestMethod.POST)
+    @ResponseBody
     public ResponseResult login(String name,String password){
         ResponseResult responseResult=new ResponseResult();
-        password= MD5Utils.encrypt(password);
+        password= MD5Utils.encrypt(name,password);
         UsernamePasswordToken token = new UsernamePasswordToken(name,password);
         Subject subject = SecurityUtils.getSubject();
 
@@ -50,7 +52,9 @@ public class LoginController {
 
     @RequestMapping("/index")
     public String index(Model model){
-        ShiroUser user=(ShiroUser) SecurityUtils.getSubject().getPrincipal();
+        Object obj =  SecurityUtils.getSubject().getPrincipal();
+        ShiroUser user=new ShiroUser();
+        user.setName(obj.toString());
         model.addAttribute("user",user);
         return "index";
     }

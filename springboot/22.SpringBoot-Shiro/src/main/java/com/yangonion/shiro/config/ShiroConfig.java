@@ -1,9 +1,10 @@
 package com.yangonion.shiro.config;
 
-import org.apache.shiro.mgt.DefaultSecurityManager;
+
 import org.apache.shiro.mgt.SecurityManager;
 import org.apache.shiro.spring.LifecycleBeanPostProcessor;
 import org.apache.shiro.spring.web.ShiroFilterFactoryBean;
+import org.apache.shiro.web.mgt.DefaultWebSecurityManager;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -24,14 +25,14 @@ public class ShiroConfig {
 
         LinkedHashMap<String,String> filterChainDefinitionMap =new LinkedHashMap<>();
         //静态资源,不需要拦截
-        filterChainDefinitionMap.put("/css/**","anno");
-        filterChainDefinitionMap.put("/js/**","anno");
-        filterChainDefinitionMap.put("/fonts/**","anno");
-        filterChainDefinitionMap.put("/img/**","anno");
+        filterChainDefinitionMap.put("/css/**","anon");
+        filterChainDefinitionMap.put("/js/**","anon");
+        filterChainDefinitionMap.put("/fonts/**","anon");
+        filterChainDefinitionMap.put("/img/**","anon");
         //druid监控页面不拦截
-        filterChainDefinitionMap.put("/druid/**","anno");
+        filterChainDefinitionMap.put("/druid/**","anon");
         filterChainDefinitionMap.put("/logout","logout");
-        filterChainDefinitionMap.put("/","anno");
+        filterChainDefinitionMap.put("/","anon");
 
         //除上以外所有url都必须认证通过才可以访问，未通过认证自动访问LoginUrl
         filterChainDefinitionMap.put("/**","authc");
@@ -42,7 +43,7 @@ public class ShiroConfig {
     }
     @Bean
     public SecurityManager securityManager(){
-        DefaultSecurityManager securityManager= new DefaultSecurityManager();
+        DefaultWebSecurityManager securityManager= new DefaultWebSecurityManager();
         securityManager.setRealm(shiroRealm());
         return  securityManager;
     }

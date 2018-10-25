@@ -16,21 +16,27 @@
 </div>
 </body>
 <script th:inline="javascript">
-    var ctx = [[@{/}]];
+        //var ctx = [[@{/}]];
+        var ctx = "/web/";
         function login() {
+            debugger;
             var username = $("input[name='username']").val();
             var password = $("input[name='password']").val();
             $.ajax({
                 type: "post",
                 url: ctx + "login",
-                data: {"username": username,"password": password},
+                data: {"name": username,"password": password},
                 dataType: "json",
                 success: function (r) {
+                    debugger;
                     if (r.code == 0) {
                         location.href = ctx + 'index';
                     } else {
                         alert(r.msg);
                     }
+                },
+                error: function(XMLHttpRequest, textStatus, errorThrown) {
+                    alert("Status: " + textStatus); alert("Error: " + errorThrown);
                 }
             });
         }
