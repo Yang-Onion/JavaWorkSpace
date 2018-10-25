@@ -22,10 +22,10 @@ public class LoginController {
 
     @RequestMapping(value = "/login",method = RequestMethod.POST)
     @ResponseBody
-    public ResponseResult login(String name,String password){
+    public ResponseResult login(String name,String password,Boolean rememberMe){
         ResponseResult responseResult=new ResponseResult();
         password= MD5Utils.encrypt(name,password);
-        UsernamePasswordToken token = new UsernamePasswordToken(name,password);
+        UsernamePasswordToken token = new UsernamePasswordToken(name,password,rememberMe);
         Subject subject = SecurityUtils.getSubject();
 
         try {
