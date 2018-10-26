@@ -13,7 +13,7 @@ import java.util.Date;
 @Mapper
 public interface ShiroUserMapper {
 
-    @Select("select * from shirouser where name=#{name}")
+      @Select("select * from shirouser where name=#{name}")
       @Results(id="user",value={
               @Result(property = "id",column = "id",javaType = long.class),
               @Result(property = "name",column = "name",javaType = String.class),
