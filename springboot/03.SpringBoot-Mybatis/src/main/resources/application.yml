@@ -62,9 +62,9 @@ spring:
         stat:
           log-slow-sql: true
   mybatis:
-      #type-aliases扫描路径
+    #type-aliases扫描路径
     type-aliases-package: com.yangonion.mybatis.bean
-      #mapper xml实现扫描路径
-    mapper-locations: classpath*:**/mapper/*.xml
-  #property:
+    #mapper xml实现扫描路径
+    mapper-locations: classpath:**/mapper/*.xml
+    #property:
     #order: BEFORE

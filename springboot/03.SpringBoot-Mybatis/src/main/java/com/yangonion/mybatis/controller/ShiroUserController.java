@@ -16,7 +16,7 @@ public class ShiroUserController {
     public String index(){
         try {
             ShiroUser shiroUser=  shiroUserMapper.queryUserByName("yangonion");
-            return shiroUser.getName();
+            return shiroUser.getName()+"---"+shiroUser.getCreatetime();
         } catch (Exception e) {
             e.printStackTrace();
         }

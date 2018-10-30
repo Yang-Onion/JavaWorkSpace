@@ -7,17 +7,36 @@ public class ShiroUser  implements Serializable {
 
     private static  final long servialVersionId =-339516038496531943L;
 
-    private  long id;
-    private  String name;
-    private  String password;
-    private  String status;
-    private Date crateTime;
+    /**
+     * 主键
+     */
+    private Long id;
 
-    public long getId() {
+    /**
+     * 账号
+     */
+    private String name;
+
+    /**
+     * 密码
+     */
+    private String password;
+
+    /**
+     * 状态
+     */
+    private String status;
+
+    /**
+     * 创建时间
+     */
+    private Date createtime;
+
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -28,6 +47,7 @@ public class ShiroUser  implements Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
     public String getPassword() {
         return password;
     }
@@ -44,11 +64,11 @@ public class ShiroUser  implements Serializable {
         this.status = status;
     }
 
-    public Date getCrateTime() {
-        return crateTime;
+    public Date getCreatetime() {
+        return createtime;
     }
 
-    public void setCrateTime(Date crateTime) {
-        this.crateTime = crateTime;
+    public void setCreatetime(Date createtime) {
+        this.createtime = createtime;
     }
 }
