@@ -8,6 +8,7 @@ import org.apache.shiro.authc.*;
 import org.apache.shiro.subject.Subject;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -57,5 +58,10 @@ public class LoginController {
         user.setName(obj.toString());
         model.addAttribute("user",user);
         return "index";
+    }
+
+    @GetMapping("/403")
+    public String forbid() {
+        return "403";
     }
 }

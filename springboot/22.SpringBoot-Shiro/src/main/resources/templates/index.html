@@ -6,6 +6,13 @@
 </head>
 <body>
 <p>你好！[[${user.name}]]</p>
+<h3>测试权限</h3>
+<div>
+    <a th:href="@{/user/list}">获取用户列表</a>
+    <a th:href="@{/user/add}">新增用户</a>
+    <a th:href="@{/user/delete}">删除用户</a>
+
+</div>
 <a th:href="@{/logout}">注销</a>
 </body>
 </html>

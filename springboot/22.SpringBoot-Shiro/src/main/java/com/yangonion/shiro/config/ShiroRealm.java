@@ -1,20 +1,61 @@
 package com.yangonion.shiro.config;
 
+import com.yangonion.shiro.bean.ShiroPermission;
+import com.yangonion.shiro.bean.ShiroRole;
 import com.yangonion.shiro.bean.ShiroUser;
+import com.yangonion.shiro.mapper.ShiroRolePermissionMapper;
 import com.yangonion.shiro.mapper.ShiroUserMapper;
+import com.yangonion.shiro.mapper.ShiroUserRoleMapper;
+import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.authz.AuthorizationInfo;
+import org.apache.shiro.authz.SimpleAuthorizationInfo;
 import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
 public class ShiroRealm extends AuthorizingRealm {
     @Autowired
-    private ShiroUserMapper userMapper;
+    private ShiroUserMapper shiroUserMapper;
+
+    @Autowired
+    private ShiroUserRoleMapper shiroUserRoleMapper;
+
+    @Autowired
+    private ShiroRolePermissionMapper shiroRolePermissionMapper;
 
     @Override
-    protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principalCollection) {
-        return null;
+    protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principal) {
+        Object obj =SecurityUtils.getSubject().getPrincipal();
+        if ( null==obj){
+           return null;
+        }
+        ShiroUser shiroUser= shiroUserMapper.queryUserByName(obj.toString());
+        //获取角色
+        SimpleAuthorizationInfo simpleAuthorizationInfo =new SimpleAuthorizationInfo();
+        List<ShiroRole> roleList = shiroUserRoleMapper.findByUserName(shiroUser.getName());
+        Set<String> roleSet = new HashSet<>();
+
+        for (ShiroRole r :roleList){
+            roleSet.add(r.getName());
+        }
+        //设置角色
+        simpleAuthorizationInfo.setRoles(roleSet);
+
+        //获取权限
+        List<ShiroPermission> permissionList=shiroRolePermissionMapper.findByUserName(shiroUser.getName());
+        Set<String> permissionSet = new HashSet<>();
+        for (ShiroPermission permission:permissionList){
+            permissionSet.add(permission.getName());
+        }
+        //设置权限
+        simpleAuthorizationInfo.setStringPermissions(permissionSet);
+
+        return  simpleAuthorizationInfo;
     }
 
     @Override
@@ -22,7 +63,7 @@ public class ShiroRealm extends AuthorizingRealm {
         String username = (String)token.getPrincipal();
         String password = new String((char[])token.getCredentials());
 
-        ShiroUser user = userMapper.queryUserByName(username);
+        ShiroUser user = shiroUserMapper.queryUserByName(username);
         if (user==null){
             throw new UnknownAccountException("账号不存在");
         }
