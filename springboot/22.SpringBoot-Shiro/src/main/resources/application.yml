@@ -68,3 +68,6 @@ spring:
       mapper-locations: classpath*:**/mapper/*.xml
       property:
         order: BEFORE
+  redis:
+    host: localhost
+    port: 6379

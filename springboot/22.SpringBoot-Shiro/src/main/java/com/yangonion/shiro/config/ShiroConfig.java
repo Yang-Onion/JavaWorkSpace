@@ -2,6 +2,7 @@ package com.yangonion.shiro.config;
 
 
 import at.pollux.thymeleaf.shiro.dialect.ShiroDialect;
+import org.apache.shiro.cache.ehcache.EhCacheManager;
 import org.apache.shiro.codec.Base64;
 import org.apache.shiro.mgt.SecurityManager;
 import org.apache.shiro.spring.LifecycleBeanPostProcessor;
@@ -10,6 +11,8 @@ import org.apache.shiro.spring.web.ShiroFilterFactoryBean;
 import org.apache.shiro.web.mgt.CookieRememberMeManager;
 import org.apache.shiro.web.mgt.DefaultWebSecurityManager;
 import org.apache.shiro.web.servlet.SimpleCookie;
+import org.crazycake.shiro.RedisCacheManager;
+import org.crazycake.shiro.RedisManager;
 import org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -56,6 +59,12 @@ public class ShiroConfig {
         DefaultWebSecurityManager securityManager= new DefaultWebSecurityManager();
         securityManager.setRealm(shiroRealm());
         securityManager.setRememberMeManager(rememberMeManager());
+        //设置redis缓存
+        //securityManager.setCacheManager(redisCacheManager());
+
+        //设置Ehcache缓存
+        //securityManager.setCacheManager(ehCacheManager());
+
         return  securityManager;
     }
 
@@ -102,5 +111,23 @@ public class ShiroConfig {
     @Bean
     public ShiroDialect shiroDialect(){
         return new ShiroDialect();
+    }
+
+
+    public RedisManager redisManager(){
+        return new RedisManager();
+    }
+
+    public RedisCacheManager redisCacheManager(){
+        RedisCacheManager redisCacheManager= new RedisCacheManager();
+        redisCacheManager.setRedisManager(redisManager());
+        return redisCacheManager;
+    }
+
+    @Bean
+    public EhCacheManager ehCacheManager(){
+        EhCacheManager ehCacheManager = new EhCacheManager();
+        ehCacheManager.setCacheManagerConfigFile("classpath:config/shiro-ehcache.xml");
+        return  ehCacheManager;
     }
 }

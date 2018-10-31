@@ -35,6 +35,9 @@ public class ShiroRealm extends AuthorizingRealm {
            return null;
         }
         ShiroUser shiroUser= shiroUserMapper.queryUserByName(obj.toString());
+
+        System.out.println("用户" + shiroUser.getName() + "获取权限-----ShiroRealm.doGetAuthorizationInfo");
+
         //获取角色
         SimpleAuthorizationInfo simpleAuthorizationInfo =new SimpleAuthorizationInfo();
         List<ShiroRole> roleList = shiroUserRoleMapper.findByUserName(shiroUser.getName());
