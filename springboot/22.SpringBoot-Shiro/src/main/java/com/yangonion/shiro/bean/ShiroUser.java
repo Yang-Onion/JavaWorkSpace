@@ -11,7 +11,7 @@ public class ShiroUser  implements Serializable {
     private  String name;
     private  String password;
     private  String status;
-    private Date crateTime;
+    private Date createtime;
 
     public long getId() {
         return id;
@@ -44,11 +44,11 @@ public class ShiroUser  implements Serializable {
         this.status = status;
     }
 
-    public Date getCrateTime() {
-        return crateTime;
+    public Date getCreatetime() {
+        return createtime;
     }
 
-    public void setCrateTime(Date crateTime) {
-        this.crateTime = crateTime;
+    public void setCreatetime(Date createtime) {
+        this.createtime = createtime;
     }
 }
