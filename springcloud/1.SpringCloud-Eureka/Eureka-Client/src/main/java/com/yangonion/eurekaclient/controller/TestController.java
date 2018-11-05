@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.concurrent.atomic.AtomicReference;
 
 @RestController
-@RequestMapping("/actuator")
 public class TestController {
 
     private Logger logger = LoggerFactory.getLogger(this.getClass());

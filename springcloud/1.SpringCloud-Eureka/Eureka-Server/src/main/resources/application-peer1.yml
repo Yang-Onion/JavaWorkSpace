@@ -1,0 +1,13 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: Eureka-Server
+eureka:
+  instance:
+    hostname: peer1
+  client:
+    service-url:
+      defaultZone:http://peer2.8081/eureka/
+  server:
+    enable-self-preservation: false
