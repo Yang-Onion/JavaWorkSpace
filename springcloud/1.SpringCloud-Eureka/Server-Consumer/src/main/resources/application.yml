@@ -7,3 +7,5 @@ eureka:
   client:
     service-url:
       defaultZone: http://peer1:8080/eureka/,http://peer1:8081/eureka/
+
+

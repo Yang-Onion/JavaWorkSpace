@@ -2,14 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9ccfa8ff-7b77-4f02-84af-9920f2a45bbf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Eureka-Client/src/main/java/com/yangonion/eurekaclient/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Eureka-Client/src/main/java/com/yangonion/eurekaclient/model/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server-Consumer/src/main/java/com/yangonion/serverconsumer/model/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../springboot/22.SpringBoot-Shiro/src/main/resources/config/shiro-ehcache.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../springboot/22.SpringBoot-Shiro/src/main/resources/config/shiro-ehcache.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server-Consumer/src/main/java/com/yangonion/serverconsumer/controller/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server-Consumer/src/main/java/com/yangonion/serverconsumer/controller/TestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eureka-Client/src/main/java/com/yangonion/eurekaclient/controller/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Eureka-Client/src/main/java/com/yangonion/eurekaclient/controller/TestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eureka-Client/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Eureka-Client/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eureka-Server/src/main/resources/application-peer1.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Eureka-Server/src/main/resources/application-peer1.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eureka-Server/src/main/resources/application-peer2.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Eureka-Server/src/main/resources/application-peer2.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server-Consumer/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Server-Consumer/src/main/resources/application.yml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/Eureka-Server/target/" />
@@ -31,41 +31,43 @@
     <session id="-1172668905">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="4" />
           <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.29" value="1" />
           <entry key="project.open.time.3" value="1" />
+          <entry key="project.open.time.30" value="1" />
           <entry key="project.open.time.39" value="2" />
-          <entry key="project.opened" value="4" />
+          <entry key="project.opened" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="class" value="1" />
-          <entry key="java" value="17" />
-          <entry key="xml" value="14" />
-          <entry key="yml" value="15" />
+          <entry key="class" value="2" />
+          <entry key="java" value="22" />
+          <entry key="xml" value="17" />
+          <entry key="yml" value="23" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="1" />
-          <entry key="JAVA" value="17" />
-          <entry key="XML" value="14" />
-          <entry key="YAML" value="15" />
+          <entry key="CLASS" value="2" />
+          <entry key="JAVA" value="22" />
+          <entry key="XML" value="17" />
+          <entry key="YAML" value="23" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="1363" />
+          <entry key="java" value="1432" />
           <entry key="xml" value="67" />
-          <entry key="yml" value="525" />
+          <entry key="yml" value="611" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="1363" />
+          <entry key="JAVA" value="1432" />
           <entry key="XML" value="67" />
-          <entry key="YAML" value="525" />
+          <entry key="YAML" value="611" />
         </counts>
       </usages-collector>
     </session>
@@ -73,47 +75,37 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Server-Consumer/src/main/java/com/yangonion/serverconsumer/controller/TestController.java">
+        <entry file="file://$PROJECT_DIR$/Eureka-Client/src/main/resources/application.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="111">
-              <caret line="43" column="17" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="17" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#926#927#0" expanded="true" />
-                <element signature="e#1024#1025#0" expanded="true" />
-                <element signature="e#2105#2106#0" expanded="true" />
-                <element signature="e#2184#2185#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="38">
+              <caret line="2" selection-start-line="2" selection-end-line="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Eureka-Server/src/main/resources/application.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Eureka-Server/src/main/resources/application-peer1.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="190">
+              <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Server-Consumer/pom.xml">
+        <entry file="file://$PROJECT_DIR$/Eureka-Server/src/main/resources/application-peer2.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="415">
-              <caret line="53" column="51" selection-start-line="53" selection-start-column="45" selection-end-line="53" selection-end-column="51" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Eureka-Client/src/main/java/com/yangonion/eurekaclient/controller/UserController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="41" selection-start-line="41" selection-end-line="41" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Server-Consumer/src/main/java/com/yangonion/serverconsumer/model/User.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-60">
-              <caret line="13" column="60" lean-forward="true" selection-start-line="13" selection-start-column="60" selection-end-line="13" selection-end-column="60" />
+            <state relative-caret-position="190">
+              <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -137,19 +129,19 @@
         <option value="$PROJECT_DIR$/Eureka-Server/src/main/java/com/yang/eurekaserver/EurekaserverApplication.java" />
         <option value="$PROJECT_DIR$/Eureka-Client/pom.xml" />
         <option value="$PROJECT_DIR$/Eureka-Client/src/main/java/com/yangonion/eurekaclient/EurekaclientApplication.java" />
-        <option value="$PROJECT_DIR$/Eureka-Client/src/main/java/com/yangonion/eurekaclient/controller/TestController.java" />
-        <option value="$PROJECT_DIR$/Eureka-Server/src/main/resources/application-peer1.yml" />
-        <option value="$PROJECT_DIR$/Eureka-Server/src/main/resources/application-peer2.yml" />
         <option value="$PROJECT_DIR$/Server-Consumer/pom.xml" />
         <option value="$PROJECT_DIR$/Server-Consumer/src/main/java/com/yangonion/serverconsumer/ServerconsumerApplication.java" />
-        <option value="$PROJECT_DIR$/Server-Consumer/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/Eureka-Server/pom.xml" />
         <option value="$PROJECT_DIR$/Eureka-Server/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/Eureka-Client/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/Eureka-Client/src/main/java/com/yangonion/eurekaclient/model/User.java" />
         <option value="$PROJECT_DIR$/Eureka-Client/src/main/java/com/yangonion/eurekaclient/controller/UserController.java" />
         <option value="$PROJECT_DIR$/Server-Consumer/src/main/java/com/yangonion/serverconsumer/model/User.java" />
         <option value="$PROJECT_DIR$/Server-Consumer/src/main/java/com/yangonion/serverconsumer/controller/TestController.java" />
+        <option value="$PROJECT_DIR$/Server-Consumer/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/Eureka-Client/src/main/java/com/yangonion/eurekaclient/controller/TestController.java" />
+        <option value="$PROJECT_DIR$/Eureka-Client/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/Eureka-Server/src/main/resources/application-peer1.yml" />
+        <option value="$PROJECT_DIR$/Eureka-Server/src/main/resources/application-peer2.yml" />
       </list>
     </option>
   </component>
@@ -166,11 +158,11 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-31" />
-    <option name="y" value="106" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="552" />
+    <option name="y" value="75" />
     <option name="width" value="1382" />
-    <option name="height" value="754" />
+    <option name="height" value="788" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -180,9 +172,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -214,96 +203,41 @@
               <item name="Eureka-Client" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="1.SpringCloud-Eureka" type="b2602c69:ProjectViewProjectNode" />
               <item name="1.SpringCloud-Eureka" type="462c0819:PsiDirectoryNode" />
-              <item name="Eureka-Client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="eurekaclient" type="462c0819:PsiDirectoryNode" />
+              <item name="Eureka-Server" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="1.SpringCloud-Eureka" type="b2602c69:ProjectViewProjectNode" />
               <item name="1.SpringCloud-Eureka" type="462c0819:PsiDirectoryNode" />
-              <item name="Eureka-Client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="eurekaclient" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="1.SpringCloud-Eureka" type="b2602c69:ProjectViewProjectNode" />
-              <item name="1.SpringCloud-Eureka" type="462c0819:PsiDirectoryNode" />
-              <item name="Eureka-Client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="eurekaclient" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="1.SpringCloud-Eureka" type="b2602c69:ProjectViewProjectNode" />
-              <item name="1.SpringCloud-Eureka" type="462c0819:PsiDirectoryNode" />
-              <item name="Server-Consumer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="1.SpringCloud-Eureka" type="b2602c69:ProjectViewProjectNode" />
-              <item name="1.SpringCloud-Eureka" type="462c0819:PsiDirectoryNode" />
-              <item name="Server-Consumer" type="462c0819:PsiDirectoryNode" />
+              <item name="Eureka-Server" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="1.SpringCloud-Eureka" type="b2602c69:ProjectViewProjectNode" />
               <item name="1.SpringCloud-Eureka" type="462c0819:PsiDirectoryNode" />
-              <item name="Server-Consumer" type="462c0819:PsiDirectoryNode" />
+              <item name="Eureka-Server" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="1.SpringCloud-Eureka" type="b2602c69:ProjectViewProjectNode" />
               <item name="1.SpringCloud-Eureka" type="462c0819:PsiDirectoryNode" />
-              <item name="Server-Consumer" type="462c0819:PsiDirectoryNode" />
+              <item name="Eureka-Server" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="1.SpringCloud-Eureka" type="b2602c69:ProjectViewProjectNode" />
-              <item name="1.SpringCloud-Eureka" type="462c0819:PsiDirectoryNode" />
-              <item name="Server-Consumer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="serverconsumer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="1.SpringCloud-Eureka" type="b2602c69:ProjectViewProjectNode" />
-              <item name="1.SpringCloud-Eureka" type="462c0819:PsiDirectoryNode" />
-              <item name="Server-Consumer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="serverconsumer" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="1.SpringCloud-Eureka" type="b2602c69:ProjectViewProjectNode" />
-              <item name="1.SpringCloud-Eureka" type="462c0819:PsiDirectoryNode" />
-              <item name="Server-Consumer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="serverconsumer" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -313,11 +247,11 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542273678332" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542349499948" />
     <property name="last_opened_file_path" value="I:/Git/bin/git.exe" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="Errors" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.appearance" />
   </component>
   <component name="RunDashboard">
     <option name="configurationTypes">
@@ -378,18 +312,20 @@
       <workItem from="1541123791918" duration="2642000" />
       <workItem from="1541150453044" duration="2195000" />
       <workItem from="1541399160324" duration="4833000" />
-      <workItem from="1542270988799" duration="3083000" />
+      <workItem from="1542270988799" duration="4566000" />
+      <workItem from="1542333565162" duration="361000" />
+      <workItem from="1542348128980" duration="1368000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12753000" />
+    <option name="totallyTimeSpent" value="15965000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <frame x="475" y="88" width="1382" height="788" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24659607" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25416037" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -432,77 +368,10 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Eureka-Server/src/main/java/com/yang/eurekaserver/EurekaserverApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Eureka-Client/src/main/java/com/yangonion/eurekaclient/EurekaclientApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Eureka-Server/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="458">
-          <caret line="58" column="21" selection-start-line="58" selection-start-column="21" selection-end-line="58" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Eureka-Server/src/main/resources/application-peer2.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Eureka-Server/src/main/resources/application-peer1.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="31" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Eureka-Client/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="36" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Eureka-Client/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="72" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Eureka-Server/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Server-Consumer/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="70" selection-start-line="8" selection-start-column="70" selection-end-line="8" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Server-Consumer/src/main/java/com/yangonion/serverconsumer/ServerconsumerApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
           <caret line="5" column="65" selection-start-line="5" selection-start-column="53" selection-end-line="5" selection-end-column="65" />
-          <folding>
-            <element signature="e#552#553#0" expanded="true" />
-            <element signature="e#594#595#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -517,16 +386,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3394">
           <caret line="463" column="19" selection-start-line="463" selection-start-column="19" selection-end-line="463" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Eureka-Client/src/main/java/com/yangonion/eurekaclient/controller/TestController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="31" column="31" lean-forward="true" selection-start-line="31" selection-start-column="31" selection-end-line="31" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -548,9 +407,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
           <caret line="41" selection-start-line="41" selection-end-line="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -558,20 +414,93 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="111">
           <caret line="43" column="17" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#926#927#0" expanded="true" />
-            <element signature="e#1024#1025#0" expanded="true" />
-            <element signature="e#2105#2106#0" expanded="true" />
-            <element signature="e#2184#2185#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Server-Consumer/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="415">
+        <state relative-caret-position="-209">
           <caret line="53" column="51" selection-start-line="53" selection-start-column="45" selection-end-line="53" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server-Consumer/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Eureka-Server/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-112">
+          <caret line="52" column="51" selection-start-line="52" selection-start-column="45" selection-end-line="52" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Eureka-Server/src/main/java/com/yang/eurekaserver/EurekaserverApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="7" column="19" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-commons/2.0.3.BUILD-SNAPSHOT/spring-cloud-commons-2.0.3.BUILD-20181105.041154-99.jar!/org/springframework/cloud/client/serviceregistry/Registration.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Eureka-Client/src/main/java/com/yangonion/eurekaclient/controller/TestController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="23" column="25" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Eureka-Client/src/main/java/com/yangonion/eurekaclient/EurekaclientApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Eureka-Client/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="339">
+          <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="72" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Eureka-Client/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Eureka-Server/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Eureka-Server/src/main/resources/application-peer1.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Eureka-Server/src/main/resources/application-peer2.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
         </state>
       </provider>
     </entry>

@@ -8,6 +8,6 @@ eureka:
     hostname: peer1
   client:
     service-url:
-      defaultZone:http://peer2.8081/eureka/
+      defaultZone: http://peer2.8081/eureka/
   server:
     enable-self-preservation: false

@@ -19,8 +19,7 @@ public class TestController {
     private DiscoveryClient client;
 
     @RequestMapping("/info")
-    public String into(){
-
+    public String info(){
         AtomicReference<String> info = new AtomicReference<>("");
         client.getServices().forEach(id -> {
             client.getInstances(id).forEach(instance -> {
@@ -28,8 +27,7 @@ public class TestController {
                 logger.info("/info, host:" + instance.getHost() + ", service_id:" + instance.getServiceId());
             });
         });
-
-        return info.toString();
+          return info.toString();
     }
 
     @RequestMapping("/hello")
